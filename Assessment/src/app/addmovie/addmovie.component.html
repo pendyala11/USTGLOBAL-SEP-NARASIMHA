@@ -1,0 +1,33 @@
+<div class="col-md-5 offset-3 mt-5 mb-5 p3">
+        <form action="" [formGroup]="form" (ngSubmit)=loginData(form)>
+
+                <h4 class="text-center text-white bg-success mt-2 p-2">Add Movie</h4>
+                  <div class="form-group">
+                        <input type="text" name="text" id="Title" class="form-control" placeholder="Enter Movie Title"  formControlName="Title">
+                        <div *ngIf="Title.touched && Title.invalid">
+                                <p *ngIf="Title.errors.required" class="text-danger">Enter movie Title</p>
+                               
+                         </div>
+                  </div>
+                  <div class="form-group">
+                      <input type="url" name="imgUrl" id="imgUrl" class="form-control" placeholder="enter movie url " formControlName="imgUrl">
+                      <div *ngIf="imgUrl.touched && imgUrl.invalid">
+                            <p *ngIf="imgUrl.errors.required" class="text-danger">Enter movie Url</p>
+                            <p *ngIf="imgUrl.errors.uniqueUrl" class="text-danger">Enter movie Url</p>
+                           
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                          <input type="text" name="description" id="desc" class="form-control" placeholder="Enter Movie Description" formControlName="desc">
+                          <div *ngIf="desc.touched && desc.invalid">
+                                <p *ngIf="desc.errors.required" class="text-danger">Enter movie Description</p>
+                               
+                         </div>
+                  </div>
+                  <div class="form-group">
+                        <button type="submit" class="btn btn-outline-primary float-right" [disabled]="form.invalid">Submit</button>
+                    </div>
+        
+        </form>
+</div>
