@@ -1,0 +1,49 @@
+public class TestA extends Thread{
+	public static void main(String[] args) {
+		Object obj1 = new Object();
+		   Object obj2 = new Object();
+		   
+		   Runnable r1 =()->
+		   {
+			   synchronized (obj1) {
+				   
+				   System.out.println(" T1 started ");
+				   System.out.println(" T1 has locked obj1");
+				   try {
+					obj1.wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			   synchronized (obj2) {
+				System.out.println(" T1 has locked obj2 ");
+			}
+				
+			}
+			   System.out.println(" T1 finished ");
+		   };
+		   Runnable r2 =()->
+		   {
+			   synchronized (obj2) {
+				   
+				   System.out.println(" T2 started ");
+				   System.out.println(" T2 has locked obj2");
+				   
+				   synchronized (obj1) {
+					   System.out.println(" T2 has locked obj1 ");
+					   
+					   obj1.notify();
+				   }
+				   
+			   }
+			   System.out.println(" T2 finished ");
+		   };
+		  
+		 Thread l1 = new Thread(r1);
+		 Thread l2 = new Thread(r2);
+		l1.start();
+		l2.start();
+	}
+   
+}
+

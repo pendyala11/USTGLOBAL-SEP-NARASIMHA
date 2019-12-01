@@ -1,0 +1,16 @@
+package Predicate;
+
+import java.util.function.Function;
+
+public class TestCc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Function<Integer, Integer> f = i ->i*i;
+        int res = f.apply(5);
+        System.out.println("square of 5 = "+res);
+        int result  = f.apply(15);
+        System.out.println("square of 5 = "+result);
+	}
+
+}

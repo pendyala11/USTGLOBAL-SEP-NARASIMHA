@@ -1,0 +1,34 @@
+package Predicate;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class TestFf {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     ArrayList<Emp> al = new ArrayList<Emp>();
+     Emp e1 =  new Emp(1, "narasimha");
+     Emp e2 =  new Emp(2, "rakesh");
+     Emp e3 =  new Emp(3, "kunal");
+     Emp e4 =  new Emp(4, "hari");
+     
+     Comparator<Emp> cmp =(e5,e6) ->
+     {
+    	 return e5.name.compareTo(e6.name);
+     };
+     List<Emp>  l = al.stream().sorted(cmp).collect(Collectors.toList());
+     Iterator<Emp> it = l.iterator();
+     while(it.hasNext())
+     {
+    	 Emp e = it.next();
+    	 System.out.println(" id is "+e.id);
+    	 System.out.println( " name is "+e.name);
+     }
+    
+	}
+
+}

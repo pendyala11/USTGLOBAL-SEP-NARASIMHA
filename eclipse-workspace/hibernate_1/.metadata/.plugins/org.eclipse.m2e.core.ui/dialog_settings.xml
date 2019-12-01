@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Narasimha\eclipse-workspace\hibernate_1"/>
+			<item value="C:\Users\Narasimha\Documents\jpawithhibernate1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.ustglobal_1.jpawithhibernate2"/>
+			<item value="com.ustglobal_1.jpasecond"/>
+			<item value="com.ustglobal_1.jpahibernate"/>
+			<item value="com.ustglobal_1.jpawithhibernate1"/>
+			<item value="com.ustglobal_1.jpawithhibernate"/>
+			<item value="com.ustglobal_1.jwh"/>
+			<item value="com.ustglobal_1.jpa"/>
+			<item value="com.ustglobal_1.jpawithhibernateapp"/>
+		</list>
+		<list key="groupId">
+			<item value="com.ustglobal_1"/>
+		</list>
+		<list key="artifactId">
+			<item value="jpawithhibernate2"/>
+			<item value="jpasecond"/>
+			<item value="jpahibernate"/>
+			<item value="jpawithhibernate1"/>
+			<item value="jpawithhibernate"/>
+			<item value="jwh"/>
+			<item value="jpa"/>
+			<item value="jpawithhibernateapp"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

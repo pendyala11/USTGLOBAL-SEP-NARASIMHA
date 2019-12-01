@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href=”bootstrap/css/bootstrap.min.css” rel=”stylesheet”
+	type=”text/css” />
+<script type=”text/javascript” src=”bootstrap/js/bootstrap.min.js”></script>
+</head>
+<body>
+
+
+	<form action="./formforward" class="col-md-4 offset-4 mt-5 mb-5 p-3"
+		method="post">
+		<h4 class="text-center text-white bg-success mt-2 p-2">Please
+			Login</h4>
+		<div class="form-group">
+			<input type="useremail" name="useremail" id="useremail"
+				class="form-control" placeholder="User Email" #useremail="ngModel"
+				ngModel required>
+			<div *ngIf="useremail.touched && useremail.invalid">
+				<p class="alert alert-danger" *ngIf="useremail.errors.required">Enter
+					user email id</p>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<input type="password" name="password" id="password"
+				class="form-control" placeholder="password" #password="ngModel"
+				ngModel required>
+			<div *ngIf="password.touched && password.invalid">
+				<p class="alert alert-danger" *ngIf="password.errors.required">Enter
+					user password</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-outline-primary float-right"
+				[disabled]="form.invalid">login</button>
+		</div>
+	</form>
+</body>
+</html>
