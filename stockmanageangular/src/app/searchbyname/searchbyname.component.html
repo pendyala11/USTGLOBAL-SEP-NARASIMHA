@@ -1,0 +1,47 @@
+<div class="card card-body col-md-4 offset-md-4 mt-4 mb-4" style="background: white">
+    <form #form="ngForm" (ngSubmit)="searchprodById(form)">   
+        <div class="col-sm">
+            <div class="form-group">
+              <label style="color: rgb(0, 183, 255); font-weight: bold;"> Search product By name </label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="Enter product name ...." 
+                              #name="ngModel" ngModel required>
+                  <div *ngIf="name.touched && name.invalid">
+                      <p *ngIf="name.errors.required" class="alert alert-danger"> * this field is required</p>
+                  </div>
+            </div>
+            <div class="form-group" align="center">
+                  <button type="submit" class="btn btn-outline-success" [disabled]="form.invalid" >Search</button>
+              </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="container align-self-center " *ngIf="getprodByName">
+<table class="table table-bordered mt-5 table-hover table-striped">
+<thead>
+<tr class="text-center " >
+  <th>Product ID</th>
+  <th>Product Name</th>
+  <th>Product company</th>
+  <th>Product category</th>
+  <th>Product price</th>
+  <th>Product quantity</th>
+</tr>
+</thead>
+<tbody *ngFor="let prod of getprodByName">
+<tr *ngIf="prod.id!==0" >
+  <td>{{prod.id}}</td>
+  <td>{{prod.name}}</td>
+  <td>{{prod.company}}</td>
+  <td>{{prod.category}}</td>
+  <td>{{prod.price}}</td>
+  <td>{{prod.quantity}}</td>
+
+  <td><button type="submit" class="btn btn-outline-info btn-block" 
+    (click)="cart(prod.id)">Add to cart</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+

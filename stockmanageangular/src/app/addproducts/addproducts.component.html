@@ -1,0 +1,64 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #addProduct="ngForm" (ngSubmit)='add(addProduct)'
+    method="POST">
+    <div class="card-header">
+        <div class="card-title">
+            <h4>Add Products</h4>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="company" id="company" #company='ngModel' pattern="[A-Za-z]{2,30}" ngModel required class="form-control"
+            placeholder="Enter company">
+            <div *ngIf="company.touched && company.invalid">
+                <p class="alert-danger" *ngIf="company.errors.required">*This field is required</p>
+                <p class="alert-danger" *ngIf="company.errors.pattern">*company name must contain minimum 2 characters and maximum of 30 </p>
+    
+            </div>
+
+    </div>
+    <div class="form-group">
+        <input type="text" name="name" id="name" #name='ngModel'  pattern="[A-Za-z]{3,20}"ngModel required class="form-control"
+            placeholder="Enter name of product">
+            <div *ngIf="name.touched && name.invalid">
+                <p class="alert-danger" *ngIf="name.errors.required">*This field is required</p>
+                <p class="alert-danger" *ngIf="name.errors.pattern">*name must contain minimum 3 characters and maximum of 20 </p>
+    
+            </div>
+    </div>
+
+
+    <div class="form-group">
+        <input type="category" name="category" id="category" #category='ngModel' pattern="[A-Za-z]{3,20}" ngModel class="form-control"
+            placeholder="Enter your category " >
+            <div *ngIf="category.touched && category.invalid">
+                <p class="alert-danger" *ngIf="category.errors.required">*This field is required</p>
+                <p class="alert-danger" *ngIf="category.errors.pattern">*category must contain minimum 3 characters and maximum of 20 </p>
+    
+            </div>
+    </div>
+
+    <div class="form-group">
+        <input type="number" name="price" id="price" #price='ngModel' pattern="[0-9]{1,}" ngModel class="form-control"
+            placeholder="Enter price of product">
+            <div *ngIf="price.touched && price.invalid">
+                <p class="alert-danger" *ngIf="price.errors.required">*This field is required</p>
+                <p class="alert-danger" *ngIf="price.errors.pattern">*price must contain minimum 1 number digit </p>
+    
+            </div>
+
+    </div>
+    <div class="form-group">
+        <input type="number" name="quantity" id="quantity" #quantity='ngModel' pattern="[0-9]{1,}" ngModel class="form-control"
+            placeholder="Enter quantity of product">
+            <div *ngIf="quantity.touched && quantity.invalid">
+                <p class="alert-danger" *ngIf="quantity.errors.required">*This field is required</p>
+                <p class="alert-danger" *ngIf="quantity.errors.pattern">*quantity must contain minimum 1 number digit </p>
+    
+            </div>
+
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn-outline-success float-right" [disabled]="addProduct.invalid">Add Product</button>
+    </div>
+
+
+</form>
