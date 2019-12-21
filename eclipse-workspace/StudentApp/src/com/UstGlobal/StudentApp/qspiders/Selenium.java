@@ -1,7 +1,9 @@
-package com.UstGlobal.StudentApp.qspiders;
+package com.ustglobal.studentapp.qspiders;
 
 public class Selenium {
-      void teachSelenium(){
-    	  System.out.println(" teach selenium"); 
-       }
+	public void teachSelenium() {
+		System.out.println("i teach selenium");
+	}
+
+
 }

@@ -1,15 +1,12 @@
-package com.UstGlobal.StudentApp.qspiders;
+package com.ustglobal.studentapp.qspiders;
 
-import com.UstGlobal.StudentApp.jspiders.Angular;
-import com.UstGlobal.StudentApp.jspiders.React;
+import com.ustglobal.studentapp.jspiders.Angular;
+import com.ustglobal.studentapp.jspiders.React;
 
 public class TestC {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-Angular a = new Angular();
-React r = new React();
-StringBuffer s = new StringBuffer();
-}
+		Angular a = new Angular();
+		React r = new React();
+	}
 
 }

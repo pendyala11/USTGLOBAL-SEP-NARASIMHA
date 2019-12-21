@@ -1,0 +1,11 @@
+package com.ustglobal.streams.list;
+
+import java.util.ArrayList;
+
+public class TestS {
+	
+	public static void main(String[] args) {
+		 ArrayList<Studewnt>
+	}
+
+}

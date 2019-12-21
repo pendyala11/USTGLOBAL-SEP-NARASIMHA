@@ -1,15 +1,16 @@
-package com.UstGlobal.StudentApp.qspiders;
-import static com.UstGlobal.StudentApp.jspiders.Remote.*;
+package com.ustglobal.studentapp.qspiders;
 
-import com.UstGlobal.StudentApp.jspiders.Remote;
+import static com.ustglobal.studentapp.jspiders.Remote.*;
+import com.ustglobal.studentapp.jspiders.*;
+
 public class TestB {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-   on();
-   System.out.println(num);
-   Remote r = new Remote();
-   System.out.println(r.sum);
+		on();
+		System.out.println(num);
+		Remote r = new Remote();
+		System.out.println(r.sum);
+		
+		
 	}
 
 }

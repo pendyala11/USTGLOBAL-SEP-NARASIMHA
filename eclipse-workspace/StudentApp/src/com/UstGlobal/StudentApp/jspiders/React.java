@@ -1,7 +1,9 @@
-package com.UstGlobal.StudentApp.jspiders;
+package com.ustglobal.studentapp.jspiders;
 
 public class React {
-  public void teachReact() {
-	  System.out.println(" teach react ");
-  }
+	public void teachReact() {
+		System.out.println("i teach React");
+	}
+
+
 }
